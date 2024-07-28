@@ -35,7 +35,7 @@ const ArtistInfo = ({artist}) => {
           <h3
             className={`text-white text-[22px]  xs:text-[28px] leading-[35.2px] font-mono font-bold md:text-[28px]`}
           >
-            {artist.nftSold}k+
+            {artist?.nftSold}k+
           </h3>
           <h2
             className={`text-white font-normal text-[16px] leading-[22.4px] `}
@@ -47,7 +47,7 @@ const ArtistInfo = ({artist}) => {
           <h3
             className={`text-white text-[22px] xs:text-[28px] leading-[35.2px] font-mono font-bold md:text-[28px]`}
           >
-            {artist.followers}k+
+            {artist?.followers}k+
           </h3>
           <h2
             className={`text-white font-normal text-[16px] leading-[22.4px] `}
@@ -61,7 +61,7 @@ const ArtistInfo = ({artist}) => {
           Bio
         </h2>
         <p className="text-white leading-[22.4px] text-[16px]">
-          {artist.bio}
+          {artist?.bio}
         </p>
       </div>
       <div className="my-4">

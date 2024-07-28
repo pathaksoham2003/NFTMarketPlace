@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NFTs = ({ data }) => {
   return (
-    <div className="w-full bg-primary flex items-center flex-col rounded-lg">
+    <Link to={`/nft/0`} className="w-full bg-primary flex items-center flex-col rounded-lg">
       <div className="w-full aspect-[7/6] flex items-center rounded-t-lg justify-center overflow-hidden">
         <img className="w-full h-full object-fit" src={data.nftImg} />
       </div>
@@ -27,7 +28,7 @@ const NFTs = ({ data }) => {
           </h2>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
