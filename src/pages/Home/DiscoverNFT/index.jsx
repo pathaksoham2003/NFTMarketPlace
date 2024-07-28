@@ -3,6 +3,7 @@ import styles from "../../../style";
 import { Link } from "react-router-dom";
 import { Rocket } from "../../../assets";
 import NFTs from "./NFTs";
+import { DiscoverMoreNFTs } from "../../../constants";
 
 const DiscoverNFT = () => {
   return (
@@ -10,9 +11,7 @@ const DiscoverNFT = () => {
       <div className="py-3 mb-5 flex justify-between">
         <div className="">
           <h2 className={styles.heading2}>Discover More NFTs</h2>
-          <h2 className="text-xl text-dimWhite">
-          Explore new trending NFTs
-          </h2>
+          <h2 className="text-xl text-dimWhite">Explore new trending NFTs</h2>
         </div>
         <Link
           to={"/SignUp"}
@@ -25,9 +24,9 @@ const DiscoverNFT = () => {
         </Link>
       </div>
       <div className="grid gap-2 sm:gap-4 grid-cols-2 md:gap-4 sm:grid-cols-3">
-        <NFTs />
-        <NFTs />
-        <NFTs />
+        {DiscoverMoreNFTs.map((item) => (
+          <NFTs item={item} />
+        ))}
       </div>
     </div>
   );

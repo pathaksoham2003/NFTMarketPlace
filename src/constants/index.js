@@ -1,4 +1,4 @@
-import {  binance, coinbase, dropbox, send, shield, star  } from "../assets";
+import {  binance, coinbase, dropbox, PaintBrush, send, shield, star  } from "../assets";
 
 import PsychoDog from "../images/PsychoDog.png?react";
 import MrFox from "../images/MrFox.png?react";
@@ -11,6 +11,13 @@ import Shroomie from "../images/Shroomie.png?react";
 import DiscoRob from "../images/DiscoRob.png?react";
 import DiscoRobot from "../images/DiscoRobot.png?react";
 import DiscoRobo from "../images/DiscoRobo.png?react";
+
+import SetUpWallet from "../images/SetUpWallet.png?react";
+import ConnectWallet from "../images/ConnectWallet.png?react";
+import StartEarning from "../images/StartEarning.png?react";
+
+import { AnimaKid, AstroFiction, BeKindToRobots, BlueWhale, Collectable, Dalle, DigiLab, DistantGalaxy, Dotgu, Ghiblier, GravityOne, Juanie, KeepItReal, Music, Photography, Robotica, RustyRobot, Sport, Unity, Video, VirtualWorlds } from "../images/images";
+import { Basketball, Camera, MagicWand, MusicNotes, Planet, Swatches, VideoCamera } from "../icons";
 
 export const TrendingCollection = [
   {
@@ -42,9 +49,290 @@ export const TrendingCollection = [
   }
 ]
 
-import SetUpWallet from "../images/SetUpWallet.png?react";
-import ConnectWallet from "../images/ConnectWallet.png?react";
-import StartEarning from "../images/StartEarning.png?react";
+export const TopCreators = [
+  {
+    id: 1,
+    name: 'Keepitreal',
+    photo: KeepItReal,
+    ethereumSales: 34.5,
+    volumn:120,
+    nftSold:240,
+    followers:230,
+    bio:"Hello this is my bio"
+  },
+  {
+    id: 2,
+    name: 'DigiLab',
+    photo: DigiLab,
+    ethereumSales: 34.5,
+    volumn:120,
+    nftSold:240,
+    followers:230,
+    bio:"Hello this is my bio"
+  },
+  {
+    id: 3,
+    name: 'GravityOne',
+    photo: GravityOne,
+    ethereumSales: 34.5,
+    volumn:120,
+    nftSold:240,
+    followers:230,
+    bio:"Hello this is my bio"
+  },
+  {
+    id: 4,
+    name: 'Juanié',
+    photo: Juanie,
+    ethereumSales: 34.5,
+    volumn:120,
+    nftSold:240,
+    followers:230,
+    bio:"Hello this is my bio"
+  },
+  {
+    id: 5,
+    name: 'BlueWhale',
+    photo: BlueWhale,
+    ethereumSales: 34.5,
+    volumn:120,
+    nftSold:240,
+    followers:230,
+    bio:"Hello this is my bio"
+  },
+  {
+    id: 6,
+    name: 'Mr Fox',
+    photo: MrFox,
+    ethereumSales: 34.5,
+    volumn:120,
+    nftSold:240,
+    followers:230,
+    bio:"Hello this is my bio"
+  },
+  {
+    id: 7,
+    name: 'Shroomie',
+    photo: Shroomie,
+    ethereumSales: 34.5,
+    volumn:120,
+    nftSold:240,
+    followers:230,
+    bio:"Hello this is my bio"
+  },
+  {
+    id: 8,
+    name: 'Robotica',
+    photo: Robotica,
+    ethereumSales: 34.5,
+    volumn:120,
+    nftSold:240,
+    followers:230,
+    bio:"Hello this is my bio"
+  },
+  {
+    id: 9,
+    name: 'RustyRobot',
+    photo: RustyRobot,
+    ethereumSales: 34.5,
+    volumn:120,
+    nftSold:240,
+    followers:230,
+    bio:"Hello this is my bio"
+  },
+  {
+    id: 10,
+    name: 'Animakid',
+    photo: AnimaKid,
+    ethereumSales: 34.5,
+    volumn:120,
+    nftSold:240,
+    followers:230,
+    bio:"Hello this is my bio"
+  },
+  {
+    id: 11,
+    name: 'Dotgu',
+    photo: Dotgu,
+    ethereumSales: 34.5,
+    volumn:120,
+    nftSold:240,
+    followers:230,
+    bio:"Hello this is my bio"
+  },
+  {
+    id: 12,
+    name: 'Ghiblier',
+    photo: Ghiblier,
+    ethereumSales: 34.5,
+    volumn:120,
+    nftSold:240,
+    followers:230,
+    bio:"Hello this is my bio"
+  },
+  {
+    id: 13,
+    name: 'Jaydon Ekstrom Bothman',
+    photo: PsychoDog,
+    ethereumSales: 12.4,
+    volumn:120,
+    nftSold:240,
+    followers:230,
+    bio:"Hello this is my bio"
+  },
+  {
+    id: 14,
+    name: 'Ruben Carder',
+    photo: Robotica,
+    ethereumSales: 12.4,
+    volumn:120,
+    nftSold:240,
+    followers:230,
+    bio:"Hello this is my bio"
+  },
+  {
+    id: 15,
+    name: 'Alfredo Septimus',
+    photo: RustyRobot,
+    ethereumSales: 12.4,
+    volumn:120,
+    nftSold:240,
+    followers:230,
+    bio:"Hello this is my bio"
+  },
+  {
+    id: 16,
+    name: 'Davis Franci',
+    photo: Collectable,
+    ethereumSales: 12.4,
+    volumn:120,
+    nftSold:240,
+    followers:230,
+    bio:"Hello this is my bio"
+  },
+  {
+    id: 17,
+    name: 'Livia Rosser',
+    photo: CatForFuture,
+    ethereumSales: 12.4,
+    volumn:120,
+    nftSold:240,
+    followers:230,
+    bio:"Hello this is my bio"
+  },
+  {
+    id: 18,
+    name: 'Kianna Donin',
+    photo: AstroFiction,
+    ethereumSales: 12.4,
+    volumn:120,
+    nftSold:240,
+    followers:230,
+    bio:"Hello this is my bio"
+  },
+  {
+    id: 19,
+    name: 'Phillip Lipshutz',
+    photo: DesignerBear,
+    ethereumSales: 12.4,
+    volumn:120,
+    nftSold:240,
+    followers:230,
+    bio:"Hello this is my bio"
+  },
+  {
+    id: 20,
+    name: 'Maria Rosser',
+    photo: BeKindToRobots,
+    ethereumSales: 12.4,
+    volumn:120,
+    nftSold:240,
+    followers:230,
+    bio:"Hello this is my bio"
+  },
+];
+
+export const BrowseCategory = [
+  {
+    id: 1,
+    name: 'Art',
+    icon: PaintBrush,
+    image: Dalle
+  },
+  {
+    id: 2,
+    name: 'Collectibles',
+    icon: Swatches,
+    image: Collectable
+  },
+  {
+    id: 3,
+    name: 'Music',
+    icon: MusicNotes,
+    image: Music
+  },
+  {
+    id: 4,
+    name: 'Photography',
+    icon: Camera,
+    image: Photography
+  },
+  {
+    id: 5,
+    name: 'Video',
+    icon: VideoCamera,
+    image: Video
+  },
+  {
+    id: 6,
+    name: 'Utility',
+    icon: MagicWand,
+    image: Unity
+  },
+  {
+    id: 7,
+    name: 'Sport',
+    icon: Basketball,
+    image: Sport
+  },
+  {
+    id: 8,
+    name: 'Virtual Worlds',
+    icon: Planet,
+    image: VirtualWorlds
+  }
+];
+
+export const DiscoverMoreNFTs = [
+  {
+    id: 1,
+    title: 'Distant Galaxy',
+    image: DistantGalaxy,
+    creator: 'MoonDancer',
+    creatorAvatar: AnimaKid,
+    price: '1.63 ETH',
+    highestBid: '0.33 wETH'
+  },
+  {
+    id: 2,
+    title: 'Life On Edena',
+    image: Video,
+    creator: 'NebulaKid',
+    creatorAvatar: BlueWhale,
+    price: '1.63 ETH',
+    highestBid: '0.33 wETH'
+  },
+  {
+    id: 3,
+    title: 'AstroFiction',
+    image: AstroFiction,
+    creator: 'Spaceone',
+    creatorAvatar: Dotgu,
+    price: '1.63 ETH',
+    highestBid: '0.33 wETH'
+  }
+];
+
 
 export const HowItWork = [
   {
@@ -191,12 +479,3 @@ export const footerLinks = [
   },
 ];
 
-
-const trendingCollections = [
-  {
-    id:0,
-    name:"Space Walking",
-    avatar:"",
-    creatorName:"",
-  }
-]

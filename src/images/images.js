@@ -30,12 +30,14 @@ import Sport from "./Sport.png?react";
 import Unity from "./Unity.png?react";
 import Video from "./Video.png?react";
 import VirtualWorlds from "./VirtualWorlds.png?react";
+import BannerImage from "./BannerImg.png?react";
 
 export {
   AnimaKid,
   ArtMashroom,
   AstroFiction,
   Astronaut,
+  BannerImage,
   BeKindToRobots,
   BlueWhale,
   Collectable,

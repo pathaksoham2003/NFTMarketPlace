@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { User } from "../../../assets";
+import { TopCreators } from "../../../constants";
 
-const ArtistInfo = () => {
+const ArtistInfo = ({artist}) => {
   return (
     <div className="w-full">
-      <h2 className="text-white font-semibold text-[51px]">Animakid</h2>
+      <h2 className="text-white font-semibold text-[51px]">{artist?.name}</h2>
       <div className="md:hidden flex flex-col sm:flex-row my-4">
         <div className="p-4 sm:w-[186px] my-2 sm:my-0  bg-secondary rounded-xl flex mx-2">
           <img src={User} className="mr-2 " />
@@ -22,7 +23,7 @@ const ArtistInfo = () => {
           <h3
             className={`text-white text-[22px] leading-[35.2px] font-mono font-bold md:text-[28px]`}
           >
-            240k+
+            {artist?.volumn}k+
           </h3>
           <h2
             className={`text-white font-normal text-[16px] leading-[22.4px] `}
@@ -34,7 +35,7 @@ const ArtistInfo = () => {
           <h3
             className={`text-white text-[22px]  xs:text-[28px] leading-[35.2px] font-mono font-bold md:text-[28px]`}
           >
-            100k+
+            {artist.nftSold}k+
           </h3>
           <h2
             className={`text-white font-normal text-[16px] leading-[22.4px] `}
@@ -46,7 +47,7 @@ const ArtistInfo = () => {
           <h3
             className={`text-white text-[22px] xs:text-[28px] leading-[35.2px] font-mono font-bold md:text-[28px]`}
           >
-            240k+
+            {artist.followers}k+
           </h3>
           <h2
             className={`text-white font-normal text-[16px] leading-[22.4px] `}
@@ -60,7 +61,7 @@ const ArtistInfo = () => {
           Bio
         </h2>
         <p className="text-white leading-[22.4px] text-[16px]">
-          The internet's friendliest designer kid.
+          {artist.bio}
         </p>
       </div>
       <div className="my-4">
