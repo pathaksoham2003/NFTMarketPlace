@@ -362,13 +362,17 @@ export const navLinks = [
     title: "Marketplace",
   },
   {
+    id:"/browse",
+    title:"Browse Marketplace"
+  },
+  {
     id: "/rankings",
     title: "Rankings",
   },
   {
     id: "/connectWallet",
     title: "Connect a Wallet",
-  },
+  }
 ];
 
 export const features = [

@@ -3,6 +3,7 @@ import usePages from "./pages/index";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Root from "./pages/Root";
 import NFTProfile from "./pages/NFTProfile";
+import BrowserMarketPlace from "./pages/BrowserMarketPlace";
 function App() {
   const { Home, Rankings, ArtistProfile, SignUp, ConnectWallet, NotFound } =
     usePages();
@@ -21,6 +22,7 @@ function App() {
           {/* <Route path="profile" element={
         <ProtectedRouter><Profile/></ProtectedRouter>
         }/> */}
+        <Route path="/browse" element={<BrowserMarketPlace/>} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

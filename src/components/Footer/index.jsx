@@ -64,8 +64,8 @@ const Footer = () => {
         <div className="h-[1px] my-4 bg-textGrey mx-24" />
         <div className="flex flex-1 justify-between mx-24">
           <h2 className="my-4 text-textGrey pb-4 mb-5">
-            Ⓒ Copyrights to this site are reserved and protected by WalkUp |
-            MapX.
+            Ⓒ Copyrights to this site are reserved and protected by Soham Pathak |
+            SapZap.
           </h2>
           <h2 className="my-4 text-textGrey  pb-4 mb-5">
             Developed by Soham Pathak. pathaksoham2003@gmail.com
