@@ -74,9 +74,9 @@ const RankTabs = () => {
               <div className="px-10 py-2 text-lightText font-semibold text-lg">Artist</div>
             </div>
             <div className="flex items-center">
-              <div className="px-10 pr-12 text-lightText font-semibold text-lg">Change</div>
-              <div className="px-10 pr-12 text-lightText font-semibold text-lg">NFTs Sold</div>
-              <div className="px-10 pr-12 text-lightText font-semibold text-lg">Volumn</div>
+              <div className="px-10 pr-14 text-lightText font-semibold text-lg">Change</div>
+              <div className="px-10 pr-16 text-lightText font-semibold text-lg">NFTs Sold</div>
+              <div className="px-10 pr-16 text-lightText font-semibold text-lg">Volumn</div>
             </div>
           </div>
           {TopCreators.map((item,index) => (
