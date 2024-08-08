@@ -2,7 +2,8 @@ import React from "react";
 import styles from "../../style";
 import { Link } from "react-router-dom";
 import { Rocket } from "../../assets";
-import NFTs from "./NFTs";
+import { artistTabView } from "../../utils/content";
+import NFTs from "../ArtistProfile/TabBar/NFTs";
 
 const MoreArtistNFT = () => {
   return (
@@ -22,12 +23,7 @@ const MoreArtistNFT = () => {
         </Link>
       </div>
       <div className="grid gap-2 sm:gap-4 grid-cols-2 md:gap-4 sm:grid-cols-3 mb-4">
-        <NFTs />
-        <NFTs />
-        <NFTs />
-        <NFTs />
-        <NFTs />
-        <NFTs />
+        {artistTabView[0].map(item=><NFTs data={item}/>)}
       </div>
     </div>
   );

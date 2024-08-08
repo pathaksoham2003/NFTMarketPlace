@@ -2,8 +2,8 @@ import React from "react";
 import styles from "../../style";
 import { User, logo } from "../../assets/index";
 import MoreArtistNFT from "./MoreArtistNFT";
-import Obsidian from "../../images/Obsidian.png?react";
-import AnimaKid from "../../images/AnimaKid.png?react";
+import { AnimaKid, Obsidian } from "../../images/images";
+
 const NFTProfile = () => {
   return (
     <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>

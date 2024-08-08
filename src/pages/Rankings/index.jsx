@@ -1,10 +1,14 @@
-import React from 'react'
-import styles from '../../style'
+import React from "react";
+import RankInfo from "./RankInfo";
+import RankTabs from "./RankTabs";
 
 const Rankings = () => {
   return (
-    <h2 className={styles.heading2}>Rankings</h2>
-  )
-}
+    <div className="w-full min-h-screen flex flex-col items-center">
+      <RankInfo />
+      <RankTabs />
+    </div>
+  );
+};
 
-export default Rankings
+export default Rankings;

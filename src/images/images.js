@@ -31,6 +31,7 @@ import Unity from "./Unity.png?react";
 import Video from "./Video.png?react";
 import VirtualWorlds from "./VirtualWorlds.png?react";
 import BannerImage from "./BannerImg.png?react";
+import Obsidian from "./Obsidian.png?react";
 
 export {
   AnimaKid,
@@ -56,6 +57,7 @@ export {
   Mushroom,
   Music,
   NaturalMushroom,
+  Obsidian,
   Photography,
   PsychoDog,
   Robotica,
