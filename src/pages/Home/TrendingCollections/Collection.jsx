@@ -3,7 +3,6 @@ import { PaintBrush } from "../../../assets";
 import { Link } from "react-router-dom";
 import PsychoDog from "../../../images/PsychoDog.png?react";
 const Collection = ({item}) => {
-  const [id,setID] = useState(0);
   return (
     <Link to={`/nft/${item.id}`} className="w-full bg-primary flex items-center flex-col rounded-3xl">
       <div className="w-full p-2 aspect-square flex items-center rounded-lg justify-center overflow-hidden">

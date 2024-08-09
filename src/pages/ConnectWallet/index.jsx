@@ -1,31 +1,6 @@
 import styles, { layout } from "../../style";
-import Button from "./Button";
-import SpaceShip from "../../images/SpaceShip.png?react"
-const features = [
-  { icon: "and", title: "Helllo", content: "ndsnsnd", index: 0 },
-];
-
-const FeatureCard = ({ icon, title, content, index }) => (
-  <div
-    className={`flex flex-row p-6 rounded-[20px] ${
-      index !== features.length - 1 ? "mb-6" : "mb-0"
-    } feature-card`}
-  >
-    <div
-      className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dimBlue`}
-    >
-      <img src={icon} alt="star" className="w-[50%] h-[50%] object-contain" />
-    </div>
-    <div className="flex-1 flex flex-col ml-3">
-      <h4 className="font-poppins font-semibold text-white text-[18px] leading-[23.4px] mb-1">
-        {title}
-      </h4>
-      <p className="font-poppins font-normal text-dimWhite text-[16px] leading-[24px]">
-        {content}
-      </p>
-    </div>
-  </div>
-);
+import SpaceShip from "../../images/SpaceShip.png?react";
+import { Coinbase, MetaMask, WalletConnect } from "../../icons";
 
 const ConnectWallet = () => (
   <div className={`bg-primary ${styles.flexCenter}`}>
@@ -37,10 +12,30 @@ const ConnectWallet = () => (
           <img src={SpaceShip} />
         </div>
 
-        <div className={`${layout.sectionImg} flex-col`}>
-          {features.map((feature, index) => (
-            <FeatureCard key={feature.id} {...feature} index={index} />
-          ))}
+        <div
+          className={`flex flex-1 flex-col py-10 md:ml-16 pl-10 ml-0 md:mt-0`}
+        >
+          <h2 className="text-5xl text-white py-5 font-semibold">
+            Connect Wallet
+          </h2>
+          <h2 className="text-xl text-white">
+            Choose a wallet you want to connect.
+          </h2>
+          <h2 className="text-xl text-white mb-8">
+            There are several wallet providers.
+          </h2>
+          <div className="flex w-full max-w-[350px] items-center bg-purple-800/15 border-2 rounded-3xl border-secondary py-5 my-2 px-10">
+            <img src={MetaMask} />
+            <h2 className="text-xl text-white pl-5">Metamask</h2>
+          </div>
+          <div className="flex w-full max-w-[350px] items-center bg-purple-800/15 border-2 rounded-3xl border-secondary py-5 my-2 px-10">
+            <img src={WalletConnect} />
+            <h2 className="text-xl text-white pl-5">WalletConnect</h2>
+          </div>
+          <div className="flex w-full max-w-[350px] items-center bg-purple-800/15 border-2 rounded-3xl border-secondary py-5 my-2 px-10">
+            <img src={Coinbase} />
+            <h2 className="text-xl text-white pl-5">Coinbase</h2>
+          </div>
         </div>
       </section>
     </div>

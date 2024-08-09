@@ -32,6 +32,7 @@ import Video from "./Video.png?react";
 import VirtualWorlds from "./VirtualWorlds.png?react";
 import BannerImage from "./BannerImg.png?react";
 import Obsidian from "./Obsidian.png?react";
+import CarForFuture from "./CatForFuture.png?react";
 
 export {
   AnimaKid,
@@ -42,6 +43,7 @@ export {
   BeKindToRobots,
   BlueWhale,
   Collectable,
+  CarForFuture,
   Dalle,
   DigiLab,
   DiscoRob,

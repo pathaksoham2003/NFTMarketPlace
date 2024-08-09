@@ -1,27 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../style";
 import { User, logo } from "../../assets/index";
 import MoreArtistNFT from "./MoreArtistNFT";
 import { AnimaKid, Obsidian } from "../../images/images";
+import { useParams } from "react-router-dom";
+import { NFTData, TopCreators } from "../../constants";
 
 const NFTProfile = () => {
+  const { id } = useParams();
+  const [nft, setNFT] = useState(null);
+  const [creator, setCreator] = useState(null);
+
+  useEffect(() => {
+    const data = NFTData.filter((item) => item.id == id);
+    setNFT(data[0]);
+  }, [id]);
+
+  useEffect(() => {
+    if (nft) {
+      const creatorData = TopCreators.filter((item) => item.id == nft.creator);
+      setCreator(creatorData[0]);
+    }
+  }, [nft]);
+
   return (
     <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth} justify-items-center`}>
         <div className="sm:h-[420px] md:h-[560px] w-full overflow-hidden h-[320px]">
           <img
             className="object-cover object-center w-full h-full"
-            src={Obsidian}
+            src={nft?.image}
           />
         </div>
         <div className="flex flex-1 flex-col justify-between sm:flex-row mt-10 md:mx-24">
           <div className="flex flex-1 flex-col max-w-[605px]">
             <div className="mb-10">
               <h2 className="text-[28px] sm:text-[38px] md:text-[51px] text-white font-semibold">
-                The Orbidians
+                {nft?.title}
               </h2>
               <h2 className="text-[16px] md:text-[22px] text-dimWhite font-thin">
-                Minted on Sep 30,2022
+                Minted on {nft?.mintedOn}
               </h2>
             </div>
             <div className="mb-8">
@@ -30,12 +48,12 @@ const NFTProfile = () => {
               </h2>
               <div className="flex items-center mt-2">
                 <img
-                  src={AnimaKid}
+                  src={creator?.photo}
                   alt="Author"
                   className="w-6 h-6 rounded-full mr-2"
                 />
                 <span className="text-white font-semibold text-[16px] md:text-[22px]">
-                  Animakid
+                  {creator?.name}
                 </span>
               </div>
             </div>
@@ -44,20 +62,7 @@ const NFTProfile = () => {
               Description
             </h2>
             <p className="text-[16px] md:text-[22px] text-white">
-              The Orbitians <br />
-              is a collection of 10,000 unique NFTs on the Ethereum blockchain,
-              <br />
-              There are all sorts of beings in the NFT Universe. The most
-              advanced and friendly of the bunch are Orbitians. <br /> They live
-              in a metal space machines, high up in the sky and only have one
-              foot on Earth.
-              <br /> These Orbitians are a peaceful race, but they have been at
-              war with a group of invaders for many generations. The invaders
-              are called Upside-Downs, because of their inverted bodies that
-              live on the ground, yet do not know any other way to be.
-              Upside-Downs believe that they will be able to win this war if
-              they could only get an eye into Orbitian territory, so they've
-              taken to make human beings their target.
+              {nft?.description}
             </p>
             <div className="mt-10">
               <h2 className="text-[16px] md:text-[22px] text-dimWhite font-semibold mb-3">
@@ -81,18 +86,11 @@ const NFTProfile = () => {
                 Tags
               </h2>
               <div className="flex flex-col w-full md:flex-row justify-between">
-                <h2 className="py-2 mx-1 my-1 w-fit text-white font-semibold bg-lightGrey rounded-2xl px-10">
-                  ANIMATION
-                </h2>
-                <h2 className="py-2 mx-1 my-1 w-fit text-white font-semibold bg-lightGrey rounded-2xl px-10">
-                  ILLUSTRATION
-                </h2>
-                <h2 className="py-2 mx-1 my-1 w-fit text-white font-semibold bg-lightGrey rounded-2xl px-10">
-                  MOON
-                </h2>
-                <h2 className="py-2 mx-1 my-1 w-fit text-white font-semibold bg-lightGrey rounded-2xl px-10">
-                  MOON
-                </h2>
+                {nft?.tags.map((item) => (
+                  <h2 key={item} className="py-2 mx-1 my-1 w-fit text-white font-semibold bg-lightGrey rounded-2xl px-10">
+                    {item}
+                  </h2>
+                ))}
               </div>
             </div>
           </div>
@@ -119,7 +117,7 @@ const NFTProfile = () => {
             </div>
           </div>
         </div>
-        <MoreArtistNFT />
+        <MoreArtistNFT creator={creator} />
       </div>
     </div>
   );

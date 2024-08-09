@@ -4,12 +4,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Root from "./pages/Root";
 import NFTProfile from "./pages/NFTProfile";
 import BrowserMarketPlace from "./pages/BrowserMarketPlace";
+import ScrollToTop from "./utils/ScrollToTop";
 function App() {
   const { Home, Rankings, ArtistProfile, SignUp, ConnectWallet, NotFound } =
     usePages();
 
   return (
     <Router>
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Root />}>
           <Route index element={<Home />} />

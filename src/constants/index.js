@@ -18,10 +18,11 @@ import StartEarning from "../images/StartEarning.png?react";
 
 import { AnimaKid, AstroFiction, BeKindToRobots, BlueWhale, Collectable, Dalle, DigiLab, DistantGalaxy, Dotgu, Ghiblier, GravityOne, Juanie, KeepItReal, Music, Photography, Robotica, RustyRobot, Sport, Unity, Video, VirtualWorlds } from "../images/images";
 import { Basketball, Camera, MagicWand, MusicNotes, Planet, Swatches, VideoCamera } from "../icons";
+import { Abstract, Alien, Astro, BitCoin, BullShares, Earth, Ethireum, Forest, Magical, Mountain, Programmer, ShareBull, SunSet, VR, VRBoy } from "../NFTImages";
 
 export const TrendingCollection = [
   {
-    id:0,
+    id:16,
     mainImg:PsychoDog,
     subImgOne:CatForFuture,
     subImgTwo:DesignerBear,
@@ -30,7 +31,7 @@ export const TrendingCollection = [
     cratorAvatar:MrFox,
   },
   {
-    id:1,
+    id:20,
     mainImg:Mushroom,
     subImgOne:NaturalMushroom,
     subImgTwo:ArtMushroom,
@@ -355,15 +356,10 @@ export const HowItWork = [
   }
 ]
 
-
 export const navLinks = [
   {
-    id: "/",
-    title: "Marketplace",
-  },
-  {
     id:"/browse",
-    title:"Browse Marketplace"
+    title:"Marketplace"
   },
   {
     id: "/rankings",
@@ -375,111 +371,278 @@ export const navLinks = [
   }
 ];
 
-export const features = [
+export const NFTData = [
   {
-    id: "feature-1",
-    icon: star,
-    title: "Rewards",
-    content:
-      "The best credit cards offer some tantalizing combinations of promotions and prizes",
+    id: 1,
+    title: 'Abstract',
+    image: Abstract,
+    creator: 1,
+    owner: 2,
+    collection: 3,
+    price: 100,
+    highestBid: 90,
+    description: 'A mesmerizing piece that defies definition, blending colors and shapes in an abstract form that evokes emotion and thought.',
+    tags: ['abstract', 'art', 'digital'],
+    mintedOn: '01-August-2024'
   },
   {
-    id: "feature-2",
-    icon: shield,
-    title: "100% Secured",
-    content:
-      "We take proactive steps make sure your information and transactions are secure.",
+    id: 2,
+    title: 'Alien',
+    image: Alien,
+    creator: 2,
+    owner: 3,
+    collection: 4,
+    price: 200,
+    highestBid: 180,
+    description: 'A digital depiction of an extraterrestrial being, showcasing otherworldly features and a mysterious aura.',
+    tags: ['alien', 'sci-fi', 'digital'],
+    mintedOn: '02-August-2024'
   },
   {
-    id: "feature-3",
-    icon: send,
-    title: "Balance Transfer",
-    content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+    id: 3,
+    title: 'Astro',
+    image: Astro,
+    creator: 3,
+    owner: 4,
+    collection: 5,
+    price: 150,
+    highestBid: 140,
+    description: 'An artistic representation of an astronaut, symbolizing exploration and the infinite possibilities of space.',
+    tags: ['astro', 'space', 'exploration'],
+    mintedOn: '03-August-2024'
+  },
+  {
+    id: 4,
+    title: 'BitCoin',
+    image: BitCoin,
+    creator: 4,
+    owner: 5,
+    collection: 6,
+    price: 250,
+    highestBid: 240,
+    description: 'A digital artwork celebrating the revolutionary cryptocurrency, Bitcoin, symbolizing digital finance and innovation.',
+    tags: ['bitcoin', 'cryptocurrency', 'finance'],
+    mintedOn: '04-August-2024'
+  },
+  {
+    id: 5,
+    title: 'BullShares',
+    image: BullShares,
+    creator: 5,
+    owner: 6,
+    collection: 7,
+    price: 300,
+    highestBid: 280,
+    description: 'A bold and dynamic piece representing the bullish nature of stock markets and financial growth.',
+    tags: ['bull', 'shares', 'finance'],
+    mintedOn: '05-August-2024'
+  },
+  {
+    id: 6,
+    title: 'Earth',
+    image: Earth,
+    creator: 6,
+    owner: 7,
+    collection: 8,
+    price: 350,
+    highestBid: 330,
+    description: 'A beautiful depiction of our planet, highlighting the natural beauty and diversity of Earth.',
+    tags: ['earth', 'planet', 'nature'],
+    mintedOn: '06-August-2024'
+  },
+  {
+    id: 7,
+    title: 'Ethireum',
+    image: Ethireum,
+    creator: 7,
+    owner: 8,
+    collection: 9,
+    price: 400,
+    highestBid: 380,
+    description: 'A digital piece celebrating Ethereum, the groundbreaking blockchain technology that powers decentralized applications.',
+    tags: ['ethereum', 'blockchain', 'technology'],
+    mintedOn: '07-August-2024'
+  },
+  {
+    id: 8,
+    title: 'Forest',
+    image: Forest,
+    creator: 8,
+    owner: 9,
+    collection: 10,
+    price: 450,
+    highestBid: 420,
+    description: 'A serene and captivating image of a dense forest, embodying the tranquility and mystery of nature.',
+    tags: ['forest', 'nature', 'serenity'],
+    mintedOn: '08-August-2024'
+  },
+  {
+    id: 9,
+    title: 'Magical',
+    image: Magical,
+    creator: 9,
+    owner: 10,
+    collection: 1,
+    price: 500,
+    highestBid: 480,
+    description: 'A whimsical artwork that captures the essence of magic, with enchanting elements and mystical vibes.',
+    tags: ['magical', 'whimsical', 'mystical'],
+    mintedOn: '09-August-2024'
+  },
+  {
+    id: 10,
+    title: 'Mountain',
+    image: Mountain,
+    creator: 10,
+    owner: 1,
+    collection: 2,
+    price: 550,
+    highestBid: 520,
+    description: 'A breathtaking portrayal of a mountain landscape, symbolizing strength, stability, and natural beauty.',
+    tags: ['mountain', 'landscape', 'nature'],
+    mintedOn: '10-August-2024'
+  },
+  {
+    id: 11,
+    title: 'Programmer',
+    image: Programmer,
+    creator: 1,
+    owner: 2,
+    collection: 3,
+    price: 600,
+    highestBid: 580,
+    description: 'A tribute to the world of coding and software development, showcasing the essence of a programmer\'s life.',
+    tags: ['programmer', 'coding', 'technology'],
+    mintedOn: '11-August-2024'
+  },
+  {
+    id: 12,
+    title: 'ShareBull',
+    image: ShareBull,
+    creator: 2,
+    owner: 3,
+    collection: 4,
+    price: 650,
+    highestBid: 630,
+    description: 'An energetic piece representing the bullish trends in the stock market, symbolizing financial optimism.',
+    tags: ['share', 'bull', 'stock market'],
+    mintedOn: '12-August-2024'
+  },
+  {
+    id: 13,
+    title: 'SunSet',
+    image: SunSet,
+    creator: 3,
+    owner: 4,
+    collection: 5,
+    price: 700,
+    highestBid: 680,
+    description: 'A stunning depiction of a sunset, capturing the vibrant colors and serene beauty of the evening sky.',
+    tags: ['sunset', 'nature', 'beauty'],
+    mintedOn: '13-August-2024'
+  },
+  {
+    id: 14,
+    title: 'VR',
+    image: VR,
+    creator: 4,
+    owner: 5,
+    collection: 6,
+    price: 750,
+    highestBid: 720,
+    description: 'An immersive piece illustrating the futuristic world of virtual reality and its limitless possibilities.',
+    tags: ['vr', 'virtual reality', 'technology'],
+    mintedOn: '14-August-2024'
+  },
+  {
+    id: 15,
+    title: 'VRBoy',
+    image: VRBoy,
+    creator: 5,
+    owner: 6,
+    collection: 7,
+    price: 800,
+    highestBid: 780,
+    description: 'A vibrant depiction of a young boy immersed in the world of virtual reality, experiencing endless adventures.',
+    tags: ['vrboy', 'virtual reality', 'adventure'],
+    mintedOn: '15-August-2024'
+  },
+  {
+    id: 16,
+    title: 'PsychoDog',
+    image: PsychoDog,
+    creator: 6,
+    owner: 7,
+    collection: 8,
+    price: 850,
+    highestBid: 820,
+    description: 'A wild and eccentric portrayal of a dog with a psychotic twist, blending humor and chaos.',
+    tags: ['psychodog', 'dog', 'eccentric'],
+    mintedOn: '16-August-2024'
+  },
+  {
+    id: 17,
+    title: 'CatForFuture',
+    image: CatForFuture,
+    creator: 7,
+    owner: 8,
+    collection: 9,
+    price: 900,
+    highestBid: 880,
+    description: 'A futuristic depiction of a cat, blending advanced technology with feline grace and curiosity.',
+    tags: ['cat', 'future', 'technology'],
+    mintedOn: '17-August-2024'
+  },
+  {
+    id: 18,
+    title: 'DesignerBear',
+    image: DesignerBear,
+    creator: 8,
+    owner: 9,
+    collection: 10,
+    price: 950,
+    highestBid: 920,
+    description: 'A stylish and fashionable bear, embodying creativity and design in the animal kingdom.',
+    tags: ['designer', 'bear', 'fashion'],
+    mintedOn: '18-August-2024'
+  },
+  {
+    id: 19,
+    title: 'NaturalMushroom',
+    image: NaturalMushroom,
+    creator: 9,
+    owner: 10,
+    collection: 1,
+    price: 1000,
+    highestBid: 980,
+    description: 'A realistic and detailed artwork of a mushroom, highlighting the natural beauty of fungi.',
+    tags: ['natural', 'mushroom', 'nature'],
+    mintedOn: '19-August-2024'
+  },
+  {
+    id: 20,
+    title: 'Mushroom',
+    image: Mushroom,
+    creator: 10,
+    owner: 1,
+    collection: 2,
+    price: 1050,
+    highestBid: 1020,
+    description: 'An artistic and imaginative take on a mushroom, blending vibrant colors and unique shapes.',
+    tags: ['mushroom', 'art', 'imaginative'],
+    mintedOn: '20-August-2024'
+  },
+  {
+    id: 21,
+    title: 'PsychoDog',
+    image: PsychoDog,
+    creator: 1,
+    owner: 2,
+    collection: 3,
+    price: 1100,
+    highestBid: 1080,
+    description: 'A quirky and humorous portrayal of a chicken with a psychotic twist, combining chaos and fun.',
+    tags: ['psychotic', 'chicken', 'humor'],
+    mintedOn: '21-August-2024'
   },
 ];
-
-export const stats = [
-  {
-    id: "stats-1",
-    title: "User Active",
-    value: "3800+",
-  },
-  {
-    id: "stats-2",
-    title: "Trusted by Company",
-    value: "230+",
-  },
-  {
-    id: "stats-3",
-    title: "Transaction",
-    value: "$230M+",
-  },
-];
-
-export const footerLinks = [
-  {
-    title: "Useful Links",
-    links: [
-      {
-        name: "Content",
-        link: "https://www.hoobank.com/content/",
-      },
-      {
-        name: "How it Works",
-        link: "https://www.hoobank.com/how-it-works/",
-      },
-      {
-        name: "Create",
-        link: "https://www.hoobank.com/create/",
-      },
-      {
-        name: "Explore",
-        link: "https://www.hoobank.com/explore/",
-      },
-      {
-        name: "Terms & Services",
-        link: "https://www.hoobank.com/terms-and-services/",
-      },
-    ],
-  },
-  {
-    title: "Community",
-    links: [
-      {
-        name: "Help Center",
-        link: "https://www.hoobank.com/help-center/",
-      },
-      {
-        name: "Partners",
-        link: "https://www.hoobank.com/partners/",
-      },
-      {
-        name: "Suggestions",
-        link: "https://www.hoobank.com/suggestions/",
-      },
-      {
-        name: "Blog",
-        link: "https://www.hoobank.com/blog/",
-      },
-      {
-        name: "Newsletters",
-        link: "https://www.hoobank.com/newsletters/",
-      },
-    ],
-  },
-  {
-    title: "Partner",
-    links: [
-      {
-        name: "Our Partner",
-        link: "https://www.hoobank.com/our-partner/",
-      },
-      {
-        name: "Become a Partner",
-        link: "https://www.hoobank.com/become-a-partner/",
-      },
-    ],
-  },
-];
-

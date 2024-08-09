@@ -2,6 +2,12 @@ import React from "react";
 import styles from "../../style";
 import { User, logo } from "../../assets";
 import { Link } from "react-router-dom";
+import {
+  DiscordLogo,
+  InstagramLogo,
+  TwitterLogo,
+  YoutubeLogo,
+} from "../../icons";
 
 const Footer = () => {
   return (
@@ -15,10 +21,26 @@ const Footer = () => {
             </h2>
             <h2 className="text-textGrey py-1 pl-2 pt-1">Join our community</h2>
             <div className="flex">
-              <img src={User} alt="hoobank" className="w-[20px] h-[25px] m-2" />
-              <img src={User} alt="hoobank" className="w-[20px] h-[25px] m-2" />
-              <img src={User} alt="hoobank" className="w-[20px] h-[25px] m-2" />
-              <img src={User} alt="hoobank" className="w-[20px] h-[25px] m-2" />
+              <img
+                src={DiscordLogo}
+                alt="hoobank"
+                className="w-[25px] h-[25px] m-2"
+              />
+              <img
+                src={YoutubeLogo}
+                alt="hoobank"
+                className="w-[25px] h-[25px] m-2"
+              />
+              <img
+                src={TwitterLogo}
+                alt="hoobank"
+                className="w-[25px] h-[25px] m-2"
+              />
+              <img
+                src={InstagramLogo}
+                alt="hoobank"
+                className="w-[25px] h-[25px] m-2"
+              />
             </div>
           </div>
           <div className="flex flex-col justify-between mb-4">
@@ -64,8 +86,8 @@ const Footer = () => {
         <div className="h-[1px] my-4 bg-textGrey mx-24" />
         <div className="flex flex-1 justify-between mx-24">
           <h2 className="my-4 text-textGrey pb-4 mb-5">
-            Ⓒ Copyrights to this site are reserved and protected by Soham Pathak |
-            SapZap.
+            Ⓒ Copyrights to this site are reserved and protected by Soham Pathak
+            | SapZap.
           </h2>
           <h2 className="my-4 text-textGrey  pb-4 mb-5">
             Developed by Soham Pathak. pathaksoham2003@gmail.com
