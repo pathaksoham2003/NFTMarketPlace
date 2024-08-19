@@ -3,18 +3,19 @@ import styles from "../../style";
 import { Link } from "react-router-dom";
 import { Rocket } from "../../assets";
 import { artistTabView } from "../../utils/content";
-import NFTs from "../ArtistProfile/TabBar/NFTs";
 import { NFTData } from "../../constants";
+import NFTs from "../../components/NFT";
 
-const MoreArtistNFT = ({ creator }) => {
+const MoreArtistNFT = ({ creator , id }) => {
   const [creatorNFT, setCreatorNFT] = useState([]);
 
   useEffect(() => {
     if (creator) {
       const data = NFTData.filter((item) => item.creator == creator.id);
-      setCreatorNFT(data);
+      const some = data.filter((item) => item.id != id);
+      setCreatorNFT(some);
     }
-  }, [creator]);
+  }, [creator,id]);
 
   return (
     <div className="flex-col px-0 md:px-24 py-[20px] sm:py-[40px] md:py-[60px]">
@@ -23,7 +24,7 @@ const MoreArtistNFT = ({ creator }) => {
           <h2 className={styles.heading2}>More From This Artist</h2>
         </div>
         <Link
-          to={"/SignUp"}
+        to={`/artist/${creator?.id}`}
           key={243156}
           className="max-w-64 hidden mx-2 font-poppins justify-center my-4 cursor-pointer text-[16px] border-secondary border-2 mt-6 px-5 py-2.5 w-50 rounded-2xl sm:flex"
         >
@@ -33,7 +34,7 @@ const MoreArtistNFT = ({ creator }) => {
       </div>
       <div className="grid gap-2 sm:gap-4 grid-cols-2 md:gap-4 sm:grid-cols-3 mb-4">
         {creatorNFT.map((item) => (
-          <NFTs key={item.id} data={item} creator={creator}/>
+          <NFTs key={item.id} data={item} background="bg-lightGrey"/>
         ))}
       </div>
     </div>

@@ -20,9 +20,15 @@ import InstagramLogo from "./InstagramLogo.png?react";
 import LockKey from "./LockKey.png?react";
 import MagnifyingGlass from "./MagnifyingGlass.png?react";
 import User from "./User.png?react";
+import Google from "./Google.png?react";
+import LinkedIn from "./LinkedIn.png?react";
+import Whatsapp from "./Whatsapp.png?react";
 
 export {
   User,
+  Google,
+  LinkedIn,
+  Whatsapp,
   EnvelopeSimple,
   Globe,
   RocketLaunch,

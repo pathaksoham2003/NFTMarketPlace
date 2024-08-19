@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { artistTabContent, artistTabView } from "../../../utils/content";
-import NFTs from "../../ArtistProfile/TabBar/NFTs";
+import NFTs from "../../../components/NFT";
 
-const BrowseTabs = () => {
-  const [tabIndex, setTabIndex] = useState(0);
 
+const BrowseTabs = ({tabIndex,setTabIndex,data}) => {
+  
   return (
     <div className="w-full flex items-center  flex-col">
       <div className="w-full max-w-[1180px] flex">
@@ -23,8 +22,8 @@ const BrowseTabs = () => {
       </div>
       <div className="w-full flex flex-col items-center bg-lightGrey border-b-4 border-primary">
         <div className="w-full max-w-[1240px] grid grid-cols-3 gap-8 p-8 py-10 bg-lightGrey">
-          {artistTabView[tabIndex].map((item) => (
-            <NFTs data={item} />
+          {data && data[tabIndex].map((item) => (
+            <NFTs data={item}/>
           ))}
         </div>
       </div>

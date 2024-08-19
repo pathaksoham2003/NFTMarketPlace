@@ -16,7 +16,7 @@ const TopCreator = () => {
           </h2>
         </div>
         <Link
-          to={"/SignUp"}
+          to={"/rankings"}
           key={243156}
           className="max-w-64 hidden mx-2 font-poppins justify-center my-4 cursor-pointer text-[16px] border-secondary border-2 mt-6 px-5 py-2.5 w-50 rounded-2xl sm:flex"
         >

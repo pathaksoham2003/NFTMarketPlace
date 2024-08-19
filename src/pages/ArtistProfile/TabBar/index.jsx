@@ -1,15 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TabView from "./TabView";
 import { artistTabContent } from "../../../utils/content";
+import { NFTData } from "../../../constants";
 
-const TabBar = () => {
+const TabBar = ({id,creator}) => {
   const [activeTab, setActiveTab] = useState(0);
+  const [data,setData] = useState(null);
+  
+  useEffect(()=>{
+    const res = NFTData.filter(item => item.creator == id)
+    const owned = NFTData.filter(item => item.owner == id)
+    const collection = NFTData.filter(item => item.collection == id)
+    setData([res,owned,collection])
+  },[id])
+
+
   return (
     <div className="flex-1">
       <div
         className={`w-full border-t-2 border-lightGrey px-20 pt-2 mt-4 flex justify-evenly`}
       >
-        {artistTabContent.map((item) => {
+        { artistTabContent.map((item) => {
           return (
             <div
               onClick={() => setActiveTab(item.index)}
@@ -27,7 +38,7 @@ const TabBar = () => {
           );
         })}
       </div>
-      <TabView tabIndex={activeTab} />
+      <TabView tabIndex={activeTab} data={data} creator={creator}/>
     </div>
   );
 };

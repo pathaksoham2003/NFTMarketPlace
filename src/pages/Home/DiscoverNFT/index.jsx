@@ -2,9 +2,10 @@ import React from "react";
 import styles from "../../../style";
 import { Link } from "react-router-dom";
 import { Rocket } from "../../../assets";
-import NFTs from "./NFTs";
+
 import { DiscoverMoreNFTs } from "../../../constants";
 import { Eye } from "../../../icons";
+import NFTs from "../../../components/NFT";
 
 const DiscoverNFT = () => {
   return (
@@ -26,7 +27,7 @@ const DiscoverNFT = () => {
       </div>
       <div className="grid gap-2 sm:gap-4 grid-cols-2 md:gap-4 sm:grid-cols-3">
         {DiscoverMoreNFTs.map((item) => (
-          <NFTs item={item} />
+          <NFTs data={item} creator={{name:item.creatorName,photo:item.creatorPhoto}} background="bg-lightGrey"/>
         ))}
       </div>
     </div>

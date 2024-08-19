@@ -1,9 +1,10 @@
 import React from "react";
 import { HIW1, PaintBrush } from "../../../assets";
+import { Link } from "react-router-dom";
 
 const Working = ({item}) => {
   return (
-    <div className="w-full bg-lightGrey flex px-3 items-center flex-row sm:flex-col rounded-xl h-[157px] sm:h-auto md:pb-6">
+    <Link to="/connectWallet" className="w-full bg-lightGrey flex px-3 items-center flex-row sm:flex-col rounded-xl h-[157px] sm:h-auto md:pb-6">
       <div className="w-1/4 min-w-28 sm:w-full aspect-square p-0 sm:p-5 flex items-center rounded-t-lg justify-center overflow-hidden">
         <img
           className="w-full h-full object-fit"
@@ -17,7 +18,7 @@ const Working = ({item}) => {
         </p>
 
       </div>
-    </div>
+    </Link>
   );
 };
 

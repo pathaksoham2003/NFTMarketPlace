@@ -21,7 +21,7 @@ const ArtistProfile = () => {
         <ArtistInfo artist={artist}/>
         <ButtonGroup />
       </div>
-      <TabBar />
+      <TabBar id={id} creator={artist}/>
     </section>
   );
 };

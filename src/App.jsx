@@ -20,7 +20,6 @@ function App() {
           <Route path="/rankings" element={<Rankings />} />
           <Route path="/connectWallet" element={<ConnectWallet />} />
           <Route path="/nft/:id" element={<NFTProfile/>}/>
-          <Route path="/artist/:id" element={<ArtistProfile/>}/>
           {/* <Route path="profile" element={
         <ProtectedRouter><Profile/></ProtectedRouter>
         }/> */}

@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Creator = ({ item }) => {
   return (
-    <div className="flex w-full bg-lightGrey my-2 rounded-3xl ">
+    <Link to={`/artist/${item.id}`} className="flex w-full bg-lightGrey my-2 rounded-3xl ">
       <div className="flex flex-1 items-center py-3">
         <div className="w-8 h-8 flex justify-center items-center text-lightText bg-primary  rounded-full mx-4">
           {item.index + 1}
@@ -17,7 +18,7 @@ const Creator = ({ item }) => {
         <div className="px-10 mr-12 py-2 text-lg text-white">{item.nftSold}</div>
         <div className="px-10 mr-12 py-2 text-lg text-white">{item.volumn} ETH</div>
       </div>
-    </div>
+    </Link>
   );
 };
 

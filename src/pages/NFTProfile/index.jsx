@@ -3,8 +3,11 @@ import styles from "../../style";
 import { User, logo } from "../../assets/index";
 import MoreArtistNFT from "./MoreArtistNFT";
 import { AnimaKid, Obsidian } from "../../images/images";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { NFTData, TopCreators } from "../../constants";
+import Timer from "../../components/Timer";
+import { Globe } from "../../icons";
+import { goGit } from "../../utils/utilsFunction";
 
 const NFTProfile = () => {
   const { id } = useParams();
@@ -46,16 +49,16 @@ const NFTProfile = () => {
               <h2 className="text-[16px] md:text-[22px] text-dimWhite font-semibold">
                 Created by
               </h2>
-              <div className="flex items-center mt-2">
+              <Link to={`/artist/${creator?.id}`} className="flex items-center mt-2">
                 <img
                   src={creator?.photo}
                   alt="Author"
-                  className="w-6 h-6 rounded-full mr-2"
+                  className="w-10 h-10 rounded-full mr-2"
                 />
                 <span className="text-white font-semibold text-[16px] md:text-[22px]">
                   {creator?.name}
                 </span>
-              </div>
+              </Link >
             </div>
 
             <h2 className="text-[16px] md:text-[22px] text-dimWhite font-semibold mb-3">
@@ -68,14 +71,14 @@ const NFTProfile = () => {
               <h2 className="text-[16px] md:text-[22px] text-dimWhite font-semibold mb-3">
                 Details
               </h2>
-              <div className="flex">
-                <img src={User} />
+              <div className="flex" onClick={goGit} >
+                <img src={Globe} />
                 <h2 className="text-white text-[16px] sm:text-[22px] ml-3">
                   View on Etherscan
                 </h2>
               </div>
-              <div className="flex">
-                <img src={User} />
+              <div className="flex" onClick={goGit} >
+                <img src={Globe}  />
                 <h2 className="text-white text-[16px] sm:text-[22px] ml-3">
                   View Original
                 </h2>
@@ -87,37 +90,19 @@ const NFTProfile = () => {
               </h2>
               <div className="flex flex-col w-full md:flex-row justify-between">
                 {nft?.tags.map((item) => (
-                  <h2 key={item} className="py-2 mx-1 my-1 w-fit text-white font-semibold bg-lightGrey rounded-2xl px-10">
+                  <h2
+                    key={item}
+                    className="py-2 mx-1 my-1 w-fit text-white font-semibold bg-lightGrey rounded-2xl px-10"
+                  >
                     {item}
                   </h2>
                 ))}
               </div>
             </div>
           </div>
-          <div className="w-full flex-col sm:w-[295px] p-4 h-[234px] bg-lightGrey rounded-xl">
-            <h2 className="text-dimWhite font-light">Auction ends in </h2>
-            <div className="flex justify-stretch">
-              <div className="flex flex-col flex-1">
-                <h2 className="text-[48px] text-white font-bold">59</h2>
-                <h2 className="text-dimWhite">Hours</h2>
-              </div>
-              <div className="text-[44px] px-2 text-white font-bold">:</div>
-              <div className="flex flex-col flex-1">
-                <h2 className="text-[48px] text-white font-bold">59</h2>
-                <h2 className="text-dimWhite">Minutes</h2>
-              </div>
-              <div className="text-[44px] px-2 text-white font-bold">:</div>
-              <div className="flex flex-col flex-1">
-                <h2 className="text-[48px] text-white font-bold">59</h2>
-                <h2 className="text-dimWhite">Seconds</h2>
-              </div>
-            </div>
-            <div className="w-full mt-2 py-3 flex justify-center bg-secondary rounded-xl text-white font-bold ">
-              Place Bid
-            </div>
-          </div>
+          <Timer/>
         </div>
-        <MoreArtistNFT creator={creator} />
+        <MoreArtistNFT creator={creator} id={id} />
       </div>
     </div>
   );

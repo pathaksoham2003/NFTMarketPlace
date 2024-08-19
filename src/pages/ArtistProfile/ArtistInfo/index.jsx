@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { User } from "../../../assets";
 import { TopCreators } from "../../../constants";
+import { Google, LinkedIn, Whatsapp } from "../../../icons";
+import { goLi, goMail, goPh, goPort, goWa } from "../../../utils/utilsFunction";
 
-const ArtistInfo = ({artist}) => {
+const ArtistInfo = ({ artist }) => {
   return (
     <div className="w-full">
       <h2 className="text-white font-semibold text-[51px]">{artist?.name}</h2>
@@ -60,20 +62,43 @@ const ArtistInfo = ({artist}) => {
         <h2 className="text-lightText font-normal text-[16px] leading-[22.4px] my-2">
           Bio
         </h2>
-        <p className="text-white leading-[22.4px] text-[16px]">
-          {artist?.bio}
-        </p>
+        <p className="text-white leading-[22.4px] text-[16px]">{artist?.bio}</p>
       </div>
       <div className="my-4">
         <h2 className="text-lightText font-normal text-[16px] leading-[22.4px]">
           Links
         </h2>
         <div className="flex sm:w-[160px] justify-between mt-2">
-          <img src={User} alt="hoobank" className="w-[20px] h-[25px] " />
-          <img src={User} alt="hoobank" className="w-[20px] h-[25px] " />
-          <img src={User} alt="hoobank" className="w-[20px] h-[25px] " />
-          <img src={User} alt="hoobank" className="w-[20px] h-[25px] " />
-          <img src={User} alt="hoobank" className="w-[20px] h-[25px] " />
+          <img src={Google} className="h-4 mx-2" onClick={goMail} />
+          <img src={LinkedIn} className="h-4 mx-2" onClick={goLi} />
+          <img src={Whatsapp} className="h-4 mx-2" onClick={goWa} />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="size-4 mr-2 fill-white"
+            onClick={goPh}
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="size-4 stroke-white"
+            onClick={goPort}
+          >
+            <path
+              fill-rule="evenodd"
+              d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z"
+              clip-rule="evenodd"
+            />
+          </svg>
         </div>
       </div>
     </div>
