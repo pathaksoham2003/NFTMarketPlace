@@ -14,7 +14,7 @@ const Hero = () => {
           Collect NFTs
         </h2>
         <p className="leading-[35.2px] text-[22px] text-white md:mt-4 font-normal sm:text-[16px] sm:leading-[22.4px] md:text-[22px] md:leading-[35.2px] md:pr-[30px]">
-          NFT marketplace UI created with Anima for Figma. Collect, buy and sell
+          NFT marketplace created for Amazing Crypto Enthusiasts. Collect, buy and sell
           art from more than 20k NFT artists.
         </p>
         <div
